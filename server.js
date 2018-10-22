@@ -7,8 +7,19 @@
  require('dotenv').config()
  const shortId = require('shortid')
  const dialogFlow = require('./dialogFlow')
+ const path = require('path');
 
  const app = express()
+
+ // Serve only the static files form the dist directory
+app.use(express.static('./dist/ChatApp'));
+
+app.get('/*', function(req,res) {
+
+  res.sendFile(path.join(__dirname,'/dist/your_app_name/index.html'));
+  });
+
+
  app.use(cors())
  app.use(bodyParser.urlencoded({ extended: false }))
  app.use(bodyParser.json())
@@ -63,4 +74,4 @@
   res.send(chat)
 })
 
-app.listen(process.env.PORT || 2000, () => console.log('Listening at 2000'))
+app.listen(process.env.PORT || 8080, () => console.log('Listening at 8080'))
