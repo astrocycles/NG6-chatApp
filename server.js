@@ -16,7 +16,7 @@ app.use(express.static('./dist/ChatApp'));
 
 app.get('/*', function(req,res) {
 
-  res.sendFile(path.join(__dirname,'/dist/your_app_name/index.html'));
+  res.sendFile(path.join(__dirname,'/dist/ChatApp/index.html'));
   });
 
 
