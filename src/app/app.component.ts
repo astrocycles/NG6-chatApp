@@ -1,6 +1,5 @@
 import { AuthService } from './auth.service';
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { ChatService } from './services/chat.service';
 
@@ -19,14 +18,9 @@ export class AppComponent implements OnInit {
 
 
 constructor(
-  private db: AngularFirestore,
   public auth: AuthService,
   public chatService: ChatService
-  ) {
-
-  this.items = db.collection<Item>('items').valueChanges();
-
-  }
+  ) {}
 
 
 ngOnInit() {}

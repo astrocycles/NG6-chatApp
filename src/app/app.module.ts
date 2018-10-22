@@ -30,9 +30,6 @@ import { MyDetailsComponent } from './my-details/my-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireAuthModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
