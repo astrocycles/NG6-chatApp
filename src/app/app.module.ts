@@ -30,7 +30,6 @@ import { MyDetailsComponent } from './my-details/my-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // AngularFireModule.initializeApp(environment.firebase, 'Chat-app'),
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
@@ -38,7 +37,7 @@ import { MyDetailsComponent } from './my-details/my-details.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService, ChatService, PusherService],
+  providers: [ChatService, PusherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
