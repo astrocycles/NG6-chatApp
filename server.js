@@ -8,12 +8,11 @@
  const shortId = require('shortid')
  const dialogFlow = require('./dialogFlow')
  const path = require('path');
- const http = require('http');
 
  const app = express()
 
  // Serve only the static files form the dist directory
- app.use(express.static(path.join(__dirname, 'dist/ChatApp')));
+app.use(express.static('./dist/ChatApp'));
 
 app.get('/*', function(req,res) {
 
@@ -75,10 +74,4 @@ app.get('/*', function(req,res) {
   res.send(chat)
 })
 
-const port = process.env.PORT || '3001';
-app.set('port', port );
-
-
-const server = http.createServer(app);
-server.listen(port, () => console.log('Running on port : ' + port ));
-
+app.listen(process.env.PORT || 8080, () => console.log('Listening at 8080'))
