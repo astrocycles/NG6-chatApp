@@ -11,7 +11,8 @@ export class PusherService {
 
     this._pusher = new Pusher('8f2a5f8e715892af2039', {
       cluster: 'eu',
-      forceTLS: true
+      forceTLS: true,
+      encrypted: true
     });
     }
     getPusher() {

@@ -17,6 +17,7 @@ export class MyDetailsComponent implements OnInit {
   ngOnInit() {
     this._createForm();
   }
+
   private _createForm() {
     this.detailsForm = this._fb.group({
       displayName: ['', Validators.required],
