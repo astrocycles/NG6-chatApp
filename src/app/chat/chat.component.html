@@ -20,7 +20,7 @@
           <p  class="joined"  *ngIf="chat.type==='joined'">
           <span class="rounded bg-primary text-white">{{chat.displayName}} Joined</span>
           <!-- //audio -->
-          <span *ngIf="chat.type==='joined' then PlayAudio()" ></span>
+          <!-- <span *ngIf="chat.type==='joined' then PlayAudio()" ></span> -->
           </p>
 
           <p  class="joined"  *ngIf="chat.type === !'joined'">

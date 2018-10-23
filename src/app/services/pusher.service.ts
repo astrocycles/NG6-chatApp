@@ -9,7 +9,7 @@ export class PusherService {
 
   constructor() {
 
-    this._pusher = new Pusher('a7ae1a9caa676e6f87b9', {
+    this._pusher = new Pusher('ab8d04825de69ffb0c6d', {
       cluster: 'eu',
        forceTLS: true
     });
