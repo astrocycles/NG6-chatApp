@@ -17,9 +17,15 @@
               <span class="time">{{chat.createdAt | date: 'HH:mm aaa'}}</span>
             </span>
           </div>
-          <p align="center" class="joined"  *ngIf="chat.type==='joined'">
+          <p  class="joined"  *ngIf="chat.type==='joined'">
           <span class="rounded bg-primary text-white">{{chat.displayName}} Joined</span>
+          <!-- //audio -->
+          <span *ngIf="chat.type==='joined' then PlayAudio()" ></span>
           </p>
+
+          <p  class="joined"  *ngIf="chat.type === !'joined'">
+              <span class="rounded bg-primary text-white">{{chat.displayName}} Left :(</span>
+              </p>
         </div>
       </div>
 

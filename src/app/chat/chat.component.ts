@@ -15,6 +15,7 @@ export class ChatComponent implements OnInit {
   message: string;
   sending: boolean;
 
+
   constructor(
     private _chatService: ChatService
   ) { }
@@ -27,6 +28,7 @@ export class ChatComponent implements OnInit {
       }
       this.chats.push(data);
     });
+
 }
 
 sendMessage(message: string) {
@@ -38,6 +40,13 @@ sendMessage(message: string) {
     }, err => {
       this.sending = false;
     } );
+}
+
+PlayAudio() {
+  const audio = new Audio();
+  audio.src = '../../assets/sound/sound_ex_machina_Selection_Enter.mp3';
+  audio.load();
+   audio.play();
 }
 
 }
