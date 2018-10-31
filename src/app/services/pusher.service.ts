@@ -13,7 +13,7 @@ export class PusherService {
       cluster: 'eu',
        forceTLS: true
     });
-    Pusher.logToConsole = true;
+    Pusher.logToConsole = false;
 
     }
     getPusher() {

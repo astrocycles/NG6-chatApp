@@ -1,9 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthService } from '../auth.service';
-import { Ichat } from '../interfaces/ichat';
-import { ChatService } from '../services/chat.service';
+import { Ichat } from '../../interfaces/ichat';
+import { ChatService } from '../../services/chat.service';
 
 @Component({
   selector: 'app-chat',
